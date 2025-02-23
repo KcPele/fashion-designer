@@ -126,7 +126,7 @@ export default function Hero() {
 
             {/* Text Content */}
             <motion.div {...fadeInUp} className="space-y-8">
-              <h1 className="text-7xl font-display font-bold leading-tight">
+              <h1 className="text-6xl sm:text-7xl font-display font-bold leading-tight">
                 <motion.span
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
