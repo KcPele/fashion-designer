@@ -50,14 +50,14 @@ export default function Footer() {
             viewport={{ once: true }}
             className="space-y-4"
           >
-            <h3 className="text-2xl font-bold">Ọlá Native Wear</h3>
+            <h3 className="text-2xl font-bold">MT2 Fashion</h3>
             <p className="text-muted-foreground">
               Crafting authentic Nigerian fashion with modern sophistication
             </p>
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-muted-foreground">
                 <MapPin className="w-4 h-4" />
-                <span>123 Fashion Avenue, Lagos, Nigeria</span>
+                <span>Dawaki, Abuja, Nigeria</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Phone className="w-4 h-4" />
@@ -65,7 +65,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Mail className="w-4 h-4" />
-                <span>info@olanativewear.com</span>
+                <span>info@mt2fashion.com</span>
               </div>
             </div>
           </motion.div>
@@ -160,8 +160,8 @@ export default function Footer() {
 
         <div className="text-center text-sm text-muted-foreground">
           <p>
-            © {currentYear} Ọlá Native Wear. All rights reserved. Proudly made
-            in Nigeria.
+            © {currentYear} MT2 Fashion. All rights reserved. Proudly made in
+            Nigeria.
           </p>
         </div>
       </div>

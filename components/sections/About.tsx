@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Scissors, Star, Heart, Sparkles } from "lucide-react";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -17,10 +18,12 @@ export default function About() {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-4xl transform rotate-3"></div>
             <div className="relative aspect-square rounded-4xl overflow-hidden">
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1589156191108-c762ff4b96ab?ixlib=rb-4.0.3"
                 alt="Master Nigerian tailor at work"
-                className="object-cover w-full h-full"
+                fill
+                className="object-cover"
+                priority
               />
             </div>
           </motion.div>

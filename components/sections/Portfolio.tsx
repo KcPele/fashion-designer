@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Crown, Star, Sparkles } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 
 // Define types for our portfolio items
 interface GalleryItem {
@@ -100,14 +101,23 @@ export default function Portfolio() {
                   className="group relative aspect-[3/4] overflow-hidden rounded-2xl bg-muted"
                   onClick={() => setSelectedImage(galleryItem)}
                 >
-                  <motion.img
-                    src={galleryItem.image}
-                    alt={galleryItem.title}
-                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.3 }}
-                  />
+                  <div className="relative w-full h-full">
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.3 }}
+                      className="w-full h-full"
+                    >
+                      <Image
+                        src={galleryItem.image}
+                        alt={galleryItem.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        quality={85}
+                      />
+                    </motion.div>
+                  </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                     <h3 className="text-lg font-semibold">
@@ -145,11 +155,17 @@ export default function Portfolio() {
               className="relative max-w-4xl w-full aspect-[3/4] rounded-2xl overflow-hidden"
               onClick={(e) => e.stopPropagation()}
             >
-              <img
-                src={selectedImage.image}
-                alt={selectedImage.title}
-                className="w-full h-full object-cover"
-              />
+              <div className="relative max-w-4xl w-full aspect-[3/4] rounded-2xl overflow-hidden">
+                <Image
+                  src={selectedImage.image}
+                  alt={selectedImage.title}
+                  fill
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  className="object-cover"
+                  quality={90}
+                  priority
+                />
+              </div>
               <button
                 onClick={() => setSelectedImage(null)}
                 className="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/50 text-white flex items-center justify-center"
