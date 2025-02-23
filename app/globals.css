@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
+/* //i want the scroll to be smooth */
+html {
+  scroll-behavior: smooth;
+}
 
 :root {
   --background: 30 20% 97%;
