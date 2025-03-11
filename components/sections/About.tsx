@@ -48,7 +48,7 @@ export default function About() {
               Master Nigerian Craftsmanship
             </h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              With over 15 years of excellence in crafting exquisite Nigerian
+              With over 8 years of excellence in crafting exquisite Nigerian
               native wear, we bring authenticity and elegance to every piece.
               Our expertise spans traditional Agbada, Aso-oke, and modern
               Senator styles.
